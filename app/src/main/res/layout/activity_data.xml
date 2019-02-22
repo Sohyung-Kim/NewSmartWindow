@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".DataActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/data_background" />
+
+    <!--top bar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_title"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nanum_square_eb"
+            android:gravity="center"
+            android:text="현재 데이터"
+            android:textColor="@color/color_white"
+            android:textSize="8pt" />
+    </LinearLayout>
+    <!--top bar-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+
+        <!--거실-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/nanum_square_b"
+                android:text="거실"
+                android:textColor="@color/color_white"
+                android:textSize="6pt" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:src="@drawable/under_arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--거실-->
+
+
+    <!--먼지, 온도, 습도 버튼-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="213dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="104dp"
+            android:background="@drawable/button_frame" />
+
+        <ImageView
+            android:layout_width="213dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="104dp"
+            android:src="@drawable/data_buttonline_background" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="104dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="71dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/data_button_pressed" />
+
+            <TextView
+                android:layout_width="71dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nanum_square_eb"
+                android:gravity="center"
+                android:text="미세먼지"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="71dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/data_buttonline" />
+
+            <TextView
+                android:layout_width="71dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nanum_square_eb"
+                android:gravity="center"
+                android:text="온도"
+                android:textColor="@color/color_white" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="71dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/data_buttonline" />
+
+            <TextView
+                android:layout_width="71dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nanum_square_eb"
+                android:gravity="center"
+                android:text="습도/비"
+                android:textColor="@color/color_white" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!--미세먼지 온도 습도 버튼-->
+
+    <!--세부 데이터 창-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6.7" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="226dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:src="@drawable/white_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_eb"
+                android:gravity="center"
+                android:paddingTop="372dp"
+                android:text="19/02/08/06:09"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12.5sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="26dp"
+                android:paddingRight="46dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_square_eb"
+                    android:text="자동 열림"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="106dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_square_eb"
+                    android:text="자동 닫힘"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tmon_monsori"
+                    android:gravity="center|right"
+                    android:paddingRight="8dp"
+                    android:text="20"
+                    android:textColor="#333c41"
+                    android:textSize="27sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nanum_square_eb"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="10dp"
+                        android:text="㎛"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="6pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/nanum_square_eb"
+                        android:paddingLeft="2dp"
+                        android:text="이하"
+                        android:textColor="@color/color_middlegray"
+                        android:textSize="6pt" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="62dp"
+                    android:src="@drawable/gray_line" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tmon_monsori"
+                    android:gravity="center|right"
+                    android:paddingRight="8dp"
+                    android:text="80"
+                    android:textColor="#333c41"
+                    android:textSize="27sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nanum_square_eb"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="10dp"
+                        android:text="㎛"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="6pt" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/nanum_square_eb"
+                        android:paddingLeft="2dp"
+                        android:text="이상"
+                        android:textColor="@color/color_middlegray"
+                        android:textSize="6pt" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--세부 데이터 창-->
+
+    <!--원형 측정기-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.9"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rate_meter" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="192dp"-->
+                <!--android:layout_height="192dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="52dp"-->
+                <!--android:src="@drawable/rate_meter_bar" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="67dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/bad_light" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/tmon_monsori"
+                        android:text="140"
+                        android:textColor="@color/color_dark"
+                        android:textSize="27sp" />
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bad" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="65dp"
+                    android:fontFamily="@font/nanum_square_eb"
+                    android:layout_gravity="top"
+                    android:text="㎛"
+                    android:textColor="@color/colorPrimaryDark" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8.6"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="102dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/button_pressed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nanum_square_eb"
+                    android:text="자동 관리"
+                    android:textColor="@color/color_white"
+                    android:textSize="17sp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    <!--bottom bar-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:elevation="5dp"
+            android:src="@drawable/bottom_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:paddingLeft="65dp">
+
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/menu_window_unpressed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/menu_data_pressed" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:orientation="vertical"
+                android:paddingRight="65dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="match_parent"
+                    android:elevation="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/menu_setting_unpressed" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--bottom bar-->
+
+</FrameLayout>
